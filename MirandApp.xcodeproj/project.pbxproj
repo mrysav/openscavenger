@@ -15,6 +15,14 @@
 		A2DF668C1C4ABD7900249FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DF668A1C4ABD7900249FF2 /* LaunchScreen.storyboard */; };
 		A2DF66971C4ABD7900249FF2 /* MirandAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66961C4ABD7900249FF2 /* MirandAppTests.swift */; };
 		A2DF66A21C4ABD7900249FF2 /* MirandAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */; };
+		A2DF66B01C4ABDC000249FF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */; };
+		A2DF66B21C4ABDDE00249FF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */; };
+		A2DF66B51C4ABE3F00249FF2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */; };
+		A2DF66B61C4ABE3F00249FF2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2DF66B71C4ABE3F00249FF2 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */; };
+		A2DF66B81C4ABE3F00249FF2 /* MagicalRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2DF66C21C4AC46400249FF2 /* Point+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */; };
+		A2DF66C31C4AC46400249FF2 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66C11C4AC46400249FF2 /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A2DF66B91C4ABE3F00249FF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2DF66B81C4ABE3F00249FF2 /* MagicalRecord.framework in Embed Frameworks */,
+				A2DF66B61C4ABE3F00249FF2 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A2DF667B1C4ABD7800249FF2 /* MirandApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirandApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +72,12 @@
 		A2DF669D1C4ABD7900249FF2 /* MirandAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MirandAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirandAppUITests.swift; sourceTree = "<group>"; };
 		A2DF66A31C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
+		A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Point+CoreDataProperties.swift"; path = "../Point+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2DF66C11C4AC46400249FF2 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = ../Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DF66B71C4ABE3F00249FF2 /* MagicalRecord.framework in Frameworks */,
+				A2DF66B21C4ABDDE00249FF2 /* CoreLocation.framework in Frameworks */,
+				A2DF66B51C4ABE3F00249FF2 /* Alamofire.framework in Frameworks */,
+				A2DF66B01C4ABDC000249FF2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +112,10 @@
 		A2DF66721C4ABD7800249FF2 = {
 			isa = PBXGroup;
 			children = (
+				A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */,
+				A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */,
+				A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */,
+				A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */,
 				A2DF667D1C4ABD7800249FF2 /* MirandApp */,
 				A2DF66951C4ABD7900249FF2 /* MirandAppTests */,
 				A2DF66A01C4ABD7900249FF2 /* MirandAppUITests */,
@@ -99,6 +136,8 @@
 		A2DF667D1C4ABD7800249FF2 /* MirandApp */ = {
 			isa = PBXGroup;
 			children = (
+				A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */,
+				A2DF66C11C4AC46400249FF2 /* Point.swift */,
 				A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */,
 				A2DF66801C4ABD7800249FF2 /* ViewController.swift */,
 				A2DF66821C4ABD7800249FF2 /* Main.storyboard */,
@@ -138,6 +177,7 @@
 				A2DF66771C4ABD7800249FF2 /* Sources */,
 				A2DF66781C4ABD7800249FF2 /* Frameworks */,
 				A2DF66791C4ABD7800249FF2 /* Resources */,
+				A2DF66B91C4ABE3F00249FF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +236,12 @@
 				TargetAttributes = {
 					A2DF667A1C4ABD7800249FF2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = T35PKPUU86;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A2DF66911C4ABD7900249FF2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -261,6 +307,8 @@
 			files = (
 				A2DF66871C4ABD7800249FF2 /* MirandApp.xcdatamodeld in Sources */,
 				A2DF66811C4ABD7800249FF2 /* ViewController.swift in Sources */,
+				A2DF66C31C4AC46400249FF2 /* Point.swift in Sources */,
+				A2DF66C21C4AC46400249FF2 /* Point+CoreDataProperties.swift in Sources */,
 				A2DF667F1C4ABD7800249FF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +449,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MirandApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
@@ -412,6 +465,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MirandApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
