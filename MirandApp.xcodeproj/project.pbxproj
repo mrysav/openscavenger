@@ -21,8 +21,10 @@
 		A2DF66B61C4ABE3F00249FF2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2DF66B71C4ABE3F00249FF2 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */; };
 		A2DF66B81C4ABE3F00249FF2 /* MagicalRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2DF66C21C4AC46400249FF2 /* Point+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */; };
-		A2DF66C31C4AC46400249FF2 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66C11C4AC46400249FF2 /* Point.swift */; };
+		A2EBE7A21C51F82B001FD585 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */; };
+		A2EBE7A31C51F82B001FD585 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2EBE7A81C5202A0001FD585 /* Point+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */; };
+		A2EBE7A91C5202A0001FD585 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EBE7A71C5202A0001FD585 /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 			files = (
 				A2DF66B81C4ABE3F00249FF2 /* MagicalRecord.framework in Embed Frameworks */,
 				A2DF66B61C4ABE3F00249FF2 /* Alamofire.framework in Embed Frameworks */,
+				A2EBE7A31C51F82B001FD585 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,8 +79,9 @@
 		A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
-		A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Point+CoreDataProperties.swift"; path = "../Point+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A2DF66C11C4AC46400249FF2 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = ../Point.swift; sourceTree = "<group>"; };
+		A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2EBE7A71C5202A0001FD585 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				A2DF66B21C4ABDDE00249FF2 /* CoreLocation.framework in Frameworks */,
 				A2DF66B51C4ABE3F00249FF2 /* Alamofire.framework in Frameworks */,
 				A2DF66B01C4ABDC000249FF2 /* MapKit.framework in Frameworks */,
+				A2EBE7A21C51F82B001FD585 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 		A2DF66721C4ABD7800249FF2 = {
 			isa = PBXGroup;
 			children = (
+				A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */,
 				A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */,
 				A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */,
 				A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */,
@@ -136,8 +142,8 @@
 		A2DF667D1C4ABD7800249FF2 /* MirandApp */ = {
 			isa = PBXGroup;
 			children = (
-				A2DF66C01C4AC46400249FF2 /* Point+CoreDataProperties.swift */,
-				A2DF66C11C4AC46400249FF2 /* Point.swift */,
+				A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */,
+				A2EBE7A71C5202A0001FD585 /* Point.swift */,
 				A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */,
 				A2DF66801C4ABD7800249FF2 /* ViewController.swift */,
 				A2DF66821C4ABD7800249FF2 /* Main.storyboard */,
@@ -306,9 +312,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DF66871C4ABD7800249FF2 /* MirandApp.xcdatamodeld in Sources */,
+				A2EBE7A91C5202A0001FD585 /* Point.swift in Sources */,
 				A2DF66811C4ABD7800249FF2 /* ViewController.swift in Sources */,
-				A2DF66C31C4AC46400249FF2 /* Point.swift in Sources */,
-				A2DF66C21C4AC46400249FF2 /* Point+CoreDataProperties.swift in Sources */,
+				A2EBE7A81C5202A0001FD585 /* Point+CoreDataProperties.swift in Sources */,
 				A2DF667F1C4ABD7800249FF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +461,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MirandApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,6 +478,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MirandApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,6 +552,7 @@
 				A2DF66A81C4ABD7900249FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DF66A91C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +561,7 @@
 				A2DF66AB1C4ABD7900249FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DF66AC1C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +570,7 @@
 				A2DF66AE1C4ABD7900249FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

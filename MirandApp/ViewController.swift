@@ -9,19 +9,62 @@
 import UIKit
 import Alamofire
 import MagicalRecord
+import SwiftyJSON
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     let locationManager = CLLocationManager()
+    var manager = Alamofire.Manager()
+    
+    var currentPoint = [String: AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "https://rysavys.me/miranda/points.json")
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        configuration.requestCachePolicy = .ReloadIgnoringLocalCacheData
+        manager = Alamofire.Manager(configuration: configuration)
+        
+        manager.request(.GET, "https://rysavys.me/miranda/points.json")
             .responseJSON { response in
-                if let JSON = response.result.value {
-                    // print("\(JSON)")
+                
+                let localContext = NSManagedObjectContext.MR_context()
+                
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        // print("JSON: \(json)")
+                        for point in json["points"].array! {
+                            
+                            var localPoint: Point
+                            
+                            // We already have a point stored for the given id
+                            if let cdPoints = Point.MR_findByAttribute("id", withValue: point["id"].number!, inContext: localContext) {
+                                if cdPoints.count > 0 {
+                                    if cdPoints.count > 1 {
+                                        print("There was a problem -- more than one point stored for id " + point["id"].string!)
+                                    }
+                                    localPoint = cdPoints[0] as! Point
+                                } else {
+                                    localPoint = Point.MR_createEntityInContext(localContext)!
+                                    localPoint.setValue(point["id"].stringValue, forKey: "id")
+                                    localPoint.setValue(false, forKey: "completed")
+                                }
+                                
+                                localPoint.setValue(point["latitude"].string!, forKey: "latitude")
+                                localPoint.setValue(point["longitude"].string!, forKey: "longitude")
+                                localPoint.setValue(point["message"].string!, forKey: "message")
+                                localPoint.setValue(point["action"].string!, forKey: "action")
+                            }
+                        }
+                        
+                        localContext.MR_saveToPersistentStoreAndWait()
+                        self.loadCurrentPoint(localContext)
+                    }
+                case .Failure(let error):
+                    print(error)
                 }
         }
         
@@ -30,14 +73,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        print("Updating location")
+        
+        if !self.currentPoint.keys.contains("id") {
+            return
+        }
+        
+        let destLocation = CLLocation(
+            latitude: CLLocationDegrees(self.currentPoint["latitude"]! as! String)!,
+            longitude: CLLocationDegrees(self.currentPoint["longitude"]! as! String)!)
+        
+        let distInMiles = newLocation.distanceFromLocation(destLocation) * 0.000621371
+        
+        print("Distance from destination: " + distInMiles.description + " miles.");
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -46,6 +100,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func printLocation(sender: AnyObject) {
         print("\(self.locationManager.location?.coordinate.latitude), \(self.locationManager.location?.coordinate.longitude)")
+    }
+    
+    func loadCurrentPoint() {
+        return loadCurrentPoint(NSManagedObjectContext.MR_context())
+    }
+    
+    func loadCurrentPoint(localContext: NSManagedObjectContext) {
+        if let points = Point.MR_findAllSortedBy("id", ascending: true, inContext: localContext) {
+            for point in points {
+                let completed = point.valueForKey("completed")!.boolValue!
+                let id = point.valueForKey("id")!.integerValue! + 1
+                print(point)
+                let lat = point.valueForKey("latitude")!
+                let long = point.valueForKey("longitude")!
+                let message = point.valueForKey("message")!
+                let action = point.valueForKey("action")!
+
+                if completed == true {
+                    print(id.description + " is true!")
+                } else {
+                    self.currentPoint["latitude"] = lat
+                    self.currentPoint["longitude"] = long
+                    self.currentPoint["id"] = id
+                    self.currentPoint["message"] = message
+                    self.currentPoint["action"] = action
+                    print(currentPoint["id"]!.description! + " is the current point!")
+                    break
+                }
+            }
+        }
+    }
+    
+    func moveToNextPoint() {
+        
     }
 }
 
