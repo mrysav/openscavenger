@@ -16,8 +16,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     var manager = Alamofire.Manager()
-    
     var currentPoint = [String: AnyObject]()
+    var lastDistance: Double = 0
+    
+    @IBOutlet weak var directionLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var messageBox: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,17 +93,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             latitude: CLLocationDegrees(self.currentPoint["latitude"]! as! String)!,
             longitude: CLLocationDegrees(self.currentPoint["longitude"]! as! String)!)
         
-        let distInMiles = newLocation.distanceFromLocation(destLocation) * 0.000621371
+        var dir = ""
+        if(destLocation.coordinate.latitude < newLocation.coordinate.latitude) {
+            dir = "S"
+        } else {
+            dir = "N"
+        }
+        if(destLocation.coordinate.longitude < newLocation.coordinate.longitude) {
+            dir = dir + "W"
+        } else {
+            dir = dir + "E"
+        }
+        self.directionLabel.text = dir
         
-        print("Distance from destination: " + distInMiles.description + " miles.");
+        let dist = newLocation.distanceFromLocation(destLocation)
+        let distInMiles = dist * 0.000621371
+        let roundedDist = round(100 * distInMiles) / 100
+        
+        self.tempLabel.text = roundedDist.description + " miles away."
+        
+        if(dist < 10) {
+            self.tempLabel.text = "You're there!"
+            moveToNextPoint()
+        }
+        
+        self.lastDistance = dist
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error:" + error.localizedDescription)
-    }
-    
-    @IBAction func printLocation(sender: AnyObject) {
-        print("\(self.locationManager.location?.coordinate.latitude), \(self.locationManager.location?.coordinate.longitude)")
     }
     
     func loadCurrentPoint() {
@@ -107,16 +129,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func loadCurrentPoint(localContext: NSManagedObjectContext) {
+        var allComplete = true;
         if let points = Point.MR_findAllSortedBy("id", ascending: true, inContext: localContext) {
             for point in points {
                 let completed = point.valueForKey("completed")!.boolValue!
                 let id = point.valueForKey("id")!.integerValue! + 1
-                print(point)
+                // print(point)
                 let lat = point.valueForKey("latitude")!
                 let long = point.valueForKey("longitude")!
                 let message = point.valueForKey("message")!
                 let action = point.valueForKey("action")!
 
+                allComplete = allComplete && completed
                 if completed == true {
                     print(id.description + " is true!")
                 } else {
@@ -126,14 +150,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.currentPoint["message"] = message
                     self.currentPoint["action"] = action
                     print(currentPoint["id"]!.description! + " is the current point!")
+                    // self.messageBox.text = currentPoint["message"] as! String
                     break
                 }
             }
         }
+        
+        if(allComplete) {
+            print("")
+        }
     }
     
     func moveToNextPoint() {
+        self.messageBox.text = self.currentPoint["message"] as! String
         
+        let context = NSManagedObjectContext.MR_context()
+        
+        if let point = Point.MR_findFirstByAttribute("id", withValue: self.currentPoint["id"]!, inContext: context) {
+            point.completed = true
+            context.MR_saveToPersistentStoreAndWait()
+            loadCurrentPoint(context)
+        }
     }
 }
 

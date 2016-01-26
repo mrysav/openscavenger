@@ -15,35 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    #if !(TARGET_OS_EMBEDDED)
-    func createCoreDataDebugProjectWithType(storeFormat: NSNumber, storeURL: String, modelFilePath: String) {
-        
-        let project:NSDictionary = [
-            "storeFilePath": storeURL,
-            "storeFormat" : storeFormat,
-            "modelFilePath": modelFilePath,
-            "v" : "1"
-        ]
-        
-        let projectFile = "/tmp/\(NSBundle.mainBundle().infoDictionary![kCFBundleNameKey as String]!).cdp"
-        
-        project.writeToFile(projectFile, atomically: true)
-    }
-    
-    #endif
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
         MagicalRecord.setupCoreDataStackWithStoreNamed("MirandaApp.sqlite")
-        
-        #if !(TARGET_OS_EMBEDDED)  // This will work for Mac or Simulator but excludes physical iOS devices
-            #if DEBUG
-                // @(1) is NSSQLiteStoreType
-                createCoreDataDebugProjectWithType(1, storeURL: persistentStore!.URL!.absoluteString!, modelFilePath: modelUrl.absoluteString!)
-            #endif
-        #endif
-        
         return true
     }
 
