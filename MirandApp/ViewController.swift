@@ -19,9 +19,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var currentPoint = [String: AnyObject]()
     var lastDistance: Double = 0
     
-    @IBOutlet weak var directionLabel: UILabel!
-    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var messageBox: UITextView!
+    @IBOutlet weak var actionButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
         }
         
+        self.messageBox.text = "Where did the clue on the website lead?"
+        self.actionButton.setTitle("", forState: UIControlState.Normal)
+        self.distanceLabel.text = ""
+        
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -85,6 +89,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         
+        // if the current point isn't set then get out of here
         if !self.currentPoint.keys.contains("id") {
             return
         }
@@ -93,31 +98,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             latitude: CLLocationDegrees(self.currentPoint["latitude"]! as! String)!,
             longitude: CLLocationDegrees(self.currentPoint["longitude"]! as! String)!)
         
-        var dir = ""
-        if(destLocation.coordinate.latitude < newLocation.coordinate.latitude) {
-            dir = "S"
-        } else {
-            dir = "N"
-        }
-        if(destLocation.coordinate.longitude < newLocation.coordinate.longitude) {
-            dir = dir + "W"
-        } else {
-            dir = dir + "E"
-        }
-        self.directionLabel.text = dir
-        
         let dist = newLocation.distanceFromLocation(destLocation)
         let distInMiles = dist * 0.000621371
         let roundedDist = round(100 * distInMiles) / 100
         
-        self.tempLabel.text = roundedDist.description + " miles away."
+        self.distanceLabel.text = roundedDist.description + " miles away."
         
-        if(dist < 10) {
-            self.tempLabel.text = "You're there!"
+        // only say you're there when you've been standing there for at least one update
+        if(dist < 10 && self.lastDistance < 10) {
+            self.distanceLabel.text = "You're there!"
             moveToNextPoint()
         }
         
-        self.lastDistance = dist
+        // only update distance in 10 meter increments.
+        if(abs(dist - self.lastDistance) > 10) {
+            self.lastDistance = dist
+        }
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -134,7 +130,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             for point in points {
                 let completed = point.valueForKey("completed")!.boolValue!
                 let id = point.valueForKey("id")!.integerValue! + 1
-                // print(point)
                 let lat = point.valueForKey("latitude")!
                 let long = point.valueForKey("longitude")!
                 let message = point.valueForKey("message")!
@@ -149,15 +144,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.currentPoint["id"] = id
                     self.currentPoint["message"] = message
                     self.currentPoint["action"] = action
-                    print(currentPoint["id"]!.description! + " is the current point!")
-                    // self.messageBox.text = currentPoint["message"] as! String
+                    print("Point loaded!")
                     break
                 }
             }
         }
         
         if(allComplete) {
-            print("")
+            print("All points are complete!")
         }
     }
     
