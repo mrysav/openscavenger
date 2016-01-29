@@ -66,15 +66,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         
                         localContext.MR_saveToPersistentStoreAndWait()
                         self.loadCurrentPoint(localContext)
+                        self.loadMessageBoxText()
                     }
                 case .Failure(let error):
                     print(error)
                 }
         }
         
-        self.messageBox.text = "Where did the clue on the website lead?"
         self.actionButton.setTitle("", forState: UIControlState.Normal)
         self.distanceLabel.text = ""
+        self.messageBox.text = ""
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -100,18 +101,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let dist = newLocation.distanceFromLocation(destLocation)
         let distInMiles = dist * 0.000621371
-        let roundedDist = round(100 * distInMiles) / 100
+        let distInFeet = distInMiles * 5280
+        let roundedDist = round(distInFeet)
         
-        self.distanceLabel.text = roundedDist.description + " miles away."
+        self.distanceLabel.text = roundedDist.description + " feet away."
         
-        // only say you're there when you've been standing there for at least one update
-        if(dist < 10 && self.lastDistance < 10) {
+        // need to be within 15 feet of point.
+        if(roundedDist < 15) {
             self.distanceLabel.text = "You're there!"
             moveToNextPoint()
         }
         
-        // only update distance in 10 meter increments.
-        if(abs(dist - self.lastDistance) > 10) {
+        // only update distance in 5 meter increments.
+        if(abs(dist - self.lastDistance) > 5) {
             self.lastDistance = dist
         }
     }
@@ -129,7 +131,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if let points = Point.MR_findAllSortedBy("id", ascending: true, inContext: localContext) {
             for point in points {
                 let completed = point.valueForKey("completed")!.boolValue!
-                let id = point.valueForKey("id")!.integerValue! + 1
+                let id = point.valueForKey("id")!.integerValue!
                 let lat = point.valueForKey("latitude")!
                 let long = point.valueForKey("longitude")!
                 let message = point.valueForKey("message")!
@@ -144,7 +146,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.currentPoint["id"] = id
                     self.currentPoint["message"] = message
                     self.currentPoint["action"] = action
-                    print("Point loaded!")
+                    print("Point loaded: " + self.currentPoint.description)
                     break
                 }
             }
@@ -157,6 +159,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func moveToNextPoint() {
         self.messageBox.text = self.currentPoint["message"] as! String
+        //if((self.currentPoint["action"]) != nil) {
+        //    self.actionButton.setTitle("View clue!", forState: UIControlState.Normal)
+        //}
         
         let context = NSManagedObjectContext.MR_context()
         
@@ -164,6 +169,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             point.completed = true
             context.MR_saveToPersistentStoreAndWait()
             loadCurrentPoint(context)
+            loadMessageBoxText()
+        }
+    }
+    
+    func loadMessageBoxText() {
+        if(self.currentPoint["id"] != nil) {
+            if(self.currentPoint["id"]?.integerValue <= 0) {
+                self.messageBox.text = "Where did the clue on the website lead?"
+            } else {
+                if let point = Point.MR_findFirstByAttribute("id", withValue: ((self.currentPoint["id"]?.integerValue)! - 1)) {
+                    self.messageBox.text = point.message
+                }
+            }
         }
     }
 }
