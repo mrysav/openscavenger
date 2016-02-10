@@ -122,7 +122,7 @@
 				A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */,
 				A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */,
 				A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */,
-				A2DF667D1C4ABD7800249FF2 /* MirandApp */,
+				A2DF667D1C4ABD7800249FF2 /* OpenScavenger */,
 				A2DF66951C4ABD7900249FF2 /* MirandAppTests */,
 				A2DF66A01C4ABD7900249FF2 /* MirandAppUITests */,
 				A2DF667C1C4ABD7800249FF2 /* Products */,
@@ -139,7 +139,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A2DF667D1C4ABD7800249FF2 /* MirandApp */ = {
+		A2DF667D1C4ABD7800249FF2 /* OpenScavenger */ = {
 			isa = PBXGroup;
 			children = (
 				A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */,
@@ -152,6 +152,7 @@
 				A2DF668D1C4ABD7900249FF2 /* Info.plist */,
 				A2DF66851C4ABD7800249FF2 /* MirandApp.xcdatamodeld */,
 			);
+			name = OpenScavenger;
 			path = MirandApp;
 			sourceTree = "<group>";
 		};
