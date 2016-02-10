@@ -61,7 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A2DF667B1C4ABD7800249FF2 /* MirandApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirandApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DF667B1C4ABD7800249FF2 /* OpenScavenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenScavenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DF66801C4ABD7800249FF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2DF66831C4ABD7800249FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,10 +69,10 @@
 		A2DF66881C4ABD7800249FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2DF668B1C4ABD7900249FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DF668D1C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2DF66921C4ABD7900249FF2 /* MirandAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MirandAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DF66921C4ABD7900249FF2 /* OpenScavenger.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenScavenger.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF66961C4ABD7900249FF2 /* MirandAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirandAppTests.swift; sourceTree = "<group>"; };
 		A2DF66981C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2DF669D1C4ABD7900249FF2 /* MirandAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MirandAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenScavenger.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirandAppUITests.swift; sourceTree = "<group>"; };
 		A2DF66A31C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -132,9 +132,9 @@
 		A2DF667C1C4ABD7800249FF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2DF667B1C4ABD7800249FF2 /* MirandApp.app */,
-				A2DF66921C4ABD7900249FF2 /* MirandAppTests.xctest */,
-				A2DF669D1C4ABD7900249FF2 /* MirandAppUITests.xctest */,
+				A2DF667B1C4ABD7800249FF2 /* OpenScavenger.app */,
+				A2DF66921C4ABD7900249FF2 /* OpenScavenger.xctest */,
+				A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A2DF667A1C4ABD7800249FF2 /* MirandApp */ = {
+		A2DF667A1C4ABD7800249FF2 /* OpenScavenger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2DF66A61C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandApp" */;
+			buildConfigurationList = A2DF66A61C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavenger" */;
 			buildPhases = (
 				A2DF66771C4ABD7800249FF2 /* Sources */,
 				A2DF66781C4ABD7800249FF2 /* Frameworks */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = MirandApp;
+			name = OpenScavenger;
 			productName = MirandApp;
-			productReference = A2DF667B1C4ABD7800249FF2 /* MirandApp.app */;
+			productReference = A2DF667B1C4ABD7800249FF2 /* OpenScavenger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A2DF66911C4ABD7900249FF2 /* MirandAppTests */ = {
+		A2DF66911C4ABD7900249FF2 /* OpenScavengerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2DF66A91C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppTests" */;
+			buildConfigurationList = A2DF66A91C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavengerTests" */;
 			buildPhases = (
 				A2DF668E1C4ABD7900249FF2 /* Sources */,
 				A2DF668F1C4ABD7900249FF2 /* Frameworks */,
@@ -207,14 +207,14 @@
 			dependencies = (
 				A2DF66941C4ABD7900249FF2 /* PBXTargetDependency */,
 			);
-			name = MirandAppTests;
+			name = OpenScavengerTests;
 			productName = MirandAppTests;
-			productReference = A2DF66921C4ABD7900249FF2 /* MirandAppTests.xctest */;
+			productReference = A2DF66921C4ABD7900249FF2 /* OpenScavenger.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A2DF669C1C4ABD7900249FF2 /* MirandAppUITests */ = {
+		A2DF669C1C4ABD7900249FF2 /* OpenScavengerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2DF66AC1C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppUITests" */;
+			buildConfigurationList = A2DF66AC1C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavengerUITests" */;
 			buildPhases = (
 				A2DF66991C4ABD7900249FF2 /* Sources */,
 				A2DF669A1C4ABD7900249FF2 /* Frameworks */,
@@ -225,9 +225,9 @@
 			dependencies = (
 				A2DF669F1C4ABD7900249FF2 /* PBXTargetDependency */,
 			);
-			name = MirandAppUITests;
+			name = OpenScavengerUITests;
 			productName = MirandAppUITests;
-			productReference = A2DF669D1C4ABD7900249FF2 /* MirandAppUITests.xctest */;
+			productReference = A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A2DF66761C4ABD7800249FF2 /* Build configuration list for PBXProject "MirandApp" */;
+			buildConfigurationList = A2DF66761C4ABD7800249FF2 /* Build configuration list for PBXProject "OpenScavenger" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -272,9 +272,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A2DF667A1C4ABD7800249FF2 /* MirandApp */,
-				A2DF66911C4ABD7900249FF2 /* MirandAppTests */,
-				A2DF669C1C4ABD7900249FF2 /* MirandAppUITests */,
+				A2DF667A1C4ABD7800249FF2 /* OpenScavenger */,
+				A2DF66911C4ABD7900249FF2 /* OpenScavengerTests */,
+				A2DF669C1C4ABD7900249FF2 /* OpenScavengerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,12 +340,12 @@
 /* Begin PBXTargetDependency section */
 		A2DF66941C4ABD7900249FF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A2DF667A1C4ABD7800249FF2 /* MirandApp */;
+			target = A2DF667A1C4ABD7800249FF2 /* OpenScavenger */;
 			targetProxy = A2DF66931C4ABD7900249FF2 /* PBXContainerItemProxy */;
 		};
 		A2DF669F1C4ABD7900249FF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A2DF667A1C4ABD7800249FF2 /* MirandApp */;
+			target = A2DF667A1C4ABD7800249FF2 /* OpenScavenger */;
 			targetProxy = A2DF669E1C4ABD7900249FF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -464,7 +464,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenScavenger;
 			};
 			name = Debug;
 		};
@@ -481,7 +481,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenScavenger;
 			};
 			name = Release;
 		};
@@ -492,8 +492,8 @@
 				INFOPLIST_FILE = MirandAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MirandApp.app/MirandApp";
+				PRODUCT_NAME = OpenScavenger;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenScavenger.app/OpenScavenger";
 			};
 			name = Debug;
 		};
@@ -504,8 +504,8 @@
 				INFOPLIST_FILE = MirandAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MirandApp.app/MirandApp";
+				PRODUCT_NAME = OpenScavenger;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenScavenger.app/OpenScavenger";
 			};
 			name = Release;
 		};
@@ -515,7 +515,7 @@
 				INFOPLIST_FILE = MirandAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenScavenger;
 				TEST_TARGET_NAME = MirandApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -527,7 +527,7 @@
 				INFOPLIST_FILE = MirandAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenScavenger;
 				TEST_TARGET_NAME = MirandApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -536,7 +536,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A2DF66761C4ABD7800249FF2 /* Build configuration list for PBXProject "MirandApp" */ = {
+		A2DF66761C4ABD7800249FF2 /* Build configuration list for PBXProject "OpenScavenger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2DF66A41C4ABD7900249FF2 /* Debug */,
@@ -545,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2DF66A61C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandApp" */ = {
+		A2DF66A61C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavenger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2DF66A71C4ABD7900249FF2 /* Debug */,
@@ -554,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2DF66A91C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppTests" */ = {
+		A2DF66A91C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavengerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2DF66AA1C4ABD7900249FF2 /* Debug */,
@@ -563,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2DF66AC1C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "MirandAppUITests" */ = {
+		A2DF66AC1C4ABD7900249FF2 /* Build configuration list for PBXNativeTarget "OpenScavengerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A2DF66AD1C4ABD7900249FF2 /* Debug */,

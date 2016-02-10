@@ -30,7 +30,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         configuration.requestCachePolicy = .ReloadIgnoringLocalCacheData
         manager = Alamofire.Manager(configuration: configuration)
         
-        manager.request(.GET, "https://rysavys.me/miranda/points.json")
+        manager.request(.GET, "https://rysavys.me/example.json")
             .responseJSON { response in
                 
                 let localContext = NSManagedObjectContext.MR_context()
@@ -159,6 +159,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func moveToNextPoint() {
         self.messageBox.text = self.currentPoint["message"] as! String
+        // the Action button was ultimately an unused part of the schema
         //if((self.currentPoint["action"]) != nil) {
         //    self.actionButton.setTitle("View clue!", forState: UIControlState.Normal)
         //}
@@ -176,7 +177,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func loadMessageBoxText() {
         if(self.currentPoint["id"] != nil) {
             if(self.currentPoint["id"]?.integerValue <= 0) {
-                self.messageBox.text = "Where did the clue on the website lead?"
+                self.messageBox.text = "Initial Clue Here (yup, it's dumb)"
             } else {
                 if let point = Point.MR_findFirstByAttribute("id", withValue: ((self.currentPoint["id"]?.integerValue)! - 1)) {
                     self.messageBox.text = point.message
