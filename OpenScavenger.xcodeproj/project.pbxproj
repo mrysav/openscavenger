@@ -118,14 +118,14 @@
 			isa = PBXGroup;
 			children = (
 				A20327321C6BAFBE00BD037E /* Assets.xcassets */,
-				A20327331C6BAFBE00BD037E /* LaunchScreen.storyboard */,
-				A20327351C6BAFBE00BD037E /* Main.storyboard */,
-				A20327371C6BAFBE00BD037E /* Info.plist */,
-				A20327381C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld */,
 				A20327311C6BAFBE00BD037E /* AppDelegate.swift */,
 				A203273A1C6BAFBE00BD037E /* Point+CoreDataProperties.swift */,
 				A203273B1C6BAFBE00BD037E /* Point.swift */,
 				A203273C1C6BAFBE00BD037E /* ViewController.swift */,
+				A20327331C6BAFBE00BD037E /* LaunchScreen.storyboard */,
+				A20327351C6BAFBE00BD037E /* Main.storyboard */,
+				A20327371C6BAFBE00BD037E /* Info.plist */,
+				A20327381C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld */,
 			);
 			path = OpenScavenger;
 			sourceTree = "<group>";
