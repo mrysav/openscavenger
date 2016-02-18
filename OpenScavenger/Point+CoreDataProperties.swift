@@ -1,6 +1,6 @@
 //
 //  Point+CoreDataProperties.swift
-//  MirandApp
+//  OpenScavenger
 //
 //  Created by Mitchell Rysavy on 1/22/16.
 //  Copyright © 2016 Mitchell Rysavy. All rights reserved.

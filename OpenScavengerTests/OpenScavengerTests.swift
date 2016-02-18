@@ -1,15 +1,15 @@
 //
-//  MirandAppTests.swift
-//  MirandAppTests
+//  OpenScavengerTests.swift
+//  OpenScavengerTests
 //
 //  Created by Mitchell Rysavy on 1/16/16.
 //  Copyright © 2016 Mitchell Rysavy. All rights reserved.
 //
 
 import XCTest
-@testable import MirandApp
+@testable import OpenScavenger
 
-class MirandAppTests: XCTestCase {
+class OpenScavengerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

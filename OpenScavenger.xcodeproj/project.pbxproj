@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2DF667F1C4ABD7800249FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */; };
-		A2DF66811C4ABD7800249FF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66801C4ABD7800249FF2 /* ViewController.swift */; };
-		A2DF66841C4ABD7800249FF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DF66821C4ABD7800249FF2 /* Main.storyboard */; };
-		A2DF66871C4ABD7800249FF2 /* MirandApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66851C4ABD7800249FF2 /* MirandApp.xcdatamodeld */; };
-		A2DF66891C4ABD7800249FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DF66881C4ABD7800249FF2 /* Assets.xcassets */; };
-		A2DF668C1C4ABD7900249FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DF668A1C4ABD7900249FF2 /* LaunchScreen.storyboard */; };
-		A2DF66971C4ABD7900249FF2 /* MirandAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66961C4ABD7900249FF2 /* MirandAppTests.swift */; };
-		A2DF66A21C4ABD7900249FF2 /* MirandAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */; };
+		A20327431C6BAFBE00BD037E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20327311C6BAFBE00BD037E /* AppDelegate.swift */; };
+		A20327441C6BAFBE00BD037E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20327321C6BAFBE00BD037E /* Assets.xcassets */; };
+		A20327451C6BAFBE00BD037E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20327331C6BAFBE00BD037E /* LaunchScreen.storyboard */; };
+		A20327461C6BAFBE00BD037E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20327351C6BAFBE00BD037E /* Main.storyboard */; };
+		A20327481C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A20327381C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld */; };
+		A20327491C6BAFBE00BD037E /* Point+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203273A1C6BAFBE00BD037E /* Point+CoreDataProperties.swift */; };
+		A203274A1C6BAFBE00BD037E /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203273B1C6BAFBE00BD037E /* Point.swift */; };
+		A203274B1C6BAFBE00BD037E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203273C1C6BAFBE00BD037E /* ViewController.swift */; };
+		A20401B61C764E670035E9AB /* OpenScavengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203273F1C6BAFBE00BD037E /* OpenScavengerTests.swift */; };
+		A20401B71C764E6F0035E9AB /* OpenScavengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20327421C6BAFBE00BD037E /* OpenScavengerUITests.swift */; };
 		A2DF66B01C4ABDC000249FF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */; };
 		A2DF66B21C4ABDDE00249FF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */; };
 		A2DF66B51C4ABE3F00249FF2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */; };
@@ -23,8 +25,6 @@
 		A2DF66B81C4ABE3F00249FF2 /* MagicalRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2EBE7A21C51F82B001FD585 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */; };
 		A2EBE7A31C51F82B001FD585 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2EBE7A81C5202A0001FD585 /* Point+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */; };
-		A2EBE7A91C5202A0001FD585 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EBE7A71C5202A0001FD585 /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +33,14 @@
 			containerPortal = A2DF66731C4ABD7800249FF2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A2DF667A1C4ABD7800249FF2;
-			remoteInfo = MirandApp;
+			remoteInfo = OpenScavenger;
 		};
 		A2DF669E1C4ABD7900249FF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A2DF66731C4ABD7800249FF2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A2DF667A1C4ABD7800249FF2;
-			remoteInfo = MirandApp;
+			remoteInfo = OpenScavenger;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,27 +61,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A20327311C6BAFBE00BD037E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20327321C6BAFBE00BD037E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20327341C6BAFBE00BD037E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A20327361C6BAFBE00BD037E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A20327371C6BAFBE00BD037E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20327391C6BAFBE00BD037E /* OpenScavenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenScavenger.xcdatamodel; sourceTree = "<group>"; };
+		A203273A1C6BAFBE00BD037E /* Point+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A203273B1C6BAFBE00BD037E /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		A203273C1C6BAFBE00BD037E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A203273E1C6BAFBE00BD037E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A203273F1C6BAFBE00BD037E /* OpenScavengerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenScavengerTests.swift; sourceTree = "<group>"; };
+		A20327411C6BAFBE00BD037E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20327421C6BAFBE00BD037E /* OpenScavengerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenScavengerUITests.swift; sourceTree = "<group>"; };
 		A2DF667B1C4ABD7800249FF2 /* OpenScavenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenScavenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2DF66801C4ABD7800249FF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2DF66831C4ABD7800249FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A2DF66861C4ABD7800249FF2 /* MirandApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MirandApp.xcdatamodel; sourceTree = "<group>"; };
-		A2DF66881C4ABD7800249FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A2DF668B1C4ABD7900249FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A2DF668D1C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DF66921C4ABD7900249FF2 /* OpenScavenger.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenScavenger.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DF66961C4ABD7900249FF2 /* MirandAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirandAppTests.swift; sourceTree = "<group>"; };
-		A2DF66981C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenScavenger.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirandAppUITests.swift; sourceTree = "<group>"; };
-		A2DF66A31C4ABD7900249FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A2DF66B31C4ABE3F00249FF2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/iOS/MagicalRecord.framework; sourceTree = "<group>"; };
 		A2EBE7A11C51F82B001FD585 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A2EBE7A71C5202A0001FD585 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A20327301C6BAFBE00BD037E /* OpenScavenger */ = {
+			isa = PBXGroup;
+			children = (
+				A20327321C6BAFBE00BD037E /* Assets.xcassets */,
+				A20327331C6BAFBE00BD037E /* LaunchScreen.storyboard */,
+				A20327351C6BAFBE00BD037E /* Main.storyboard */,
+				A20327371C6BAFBE00BD037E /* Info.plist */,
+				A20327381C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld */,
+				A20327311C6BAFBE00BD037E /* AppDelegate.swift */,
+				A203273A1C6BAFBE00BD037E /* Point+CoreDataProperties.swift */,
+				A203273B1C6BAFBE00BD037E /* Point.swift */,
+				A203273C1C6BAFBE00BD037E /* ViewController.swift */,
+			);
+			path = OpenScavenger;
+			sourceTree = "<group>";
+		};
+		A203273D1C6BAFBE00BD037E /* OpenScavengerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A203273E1C6BAFBE00BD037E /* Info.plist */,
+				A203273F1C6BAFBE00BD037E /* OpenScavengerTests.swift */,
+			);
+			path = OpenScavengerTests;
+			sourceTree = "<group>";
+		};
+		A20327401C6BAFBE00BD037E /* OpenScavengerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A20327411C6BAFBE00BD037E /* Info.plist */,
+				A20327421C6BAFBE00BD037E /* OpenScavengerUITests.swift */,
+			);
+			path = OpenScavengerUITests;
+			sourceTree = "<group>";
+		};
 		A2DF66721C4ABD7800249FF2 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +156,9 @@
 				A2DF66B41C4ABE3F00249FF2 /* MagicalRecord.framework */,
 				A2DF66B11C4ABDDE00249FF2 /* CoreLocation.framework */,
 				A2DF66AF1C4ABDC000249FF2 /* MapKit.framework */,
-				A2DF667D1C4ABD7800249FF2 /* OpenScavenger */,
-				A2DF66951C4ABD7900249FF2 /* MirandAppTests */,
-				A2DF66A01C4ABD7900249FF2 /* MirandAppUITests */,
+				A20327301C6BAFBE00BD037E /* OpenScavenger */,
+				A203273D1C6BAFBE00BD037E /* OpenScavengerTests */,
+				A20327401C6BAFBE00BD037E /* OpenScavengerUITests */,
 				A2DF667C1C4ABD7800249FF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,41 +171,6 @@
 				A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A2DF667D1C4ABD7800249FF2 /* OpenScavenger */ = {
-			isa = PBXGroup;
-			children = (
-				A2EBE7A61C5202A0001FD585 /* Point+CoreDataProperties.swift */,
-				A2EBE7A71C5202A0001FD585 /* Point.swift */,
-				A2DF667E1C4ABD7800249FF2 /* AppDelegate.swift */,
-				A2DF66801C4ABD7800249FF2 /* ViewController.swift */,
-				A2DF66821C4ABD7800249FF2 /* Main.storyboard */,
-				A2DF66881C4ABD7800249FF2 /* Assets.xcassets */,
-				A2DF668A1C4ABD7900249FF2 /* LaunchScreen.storyboard */,
-				A2DF668D1C4ABD7900249FF2 /* Info.plist */,
-				A2DF66851C4ABD7800249FF2 /* MirandApp.xcdatamodeld */,
-			);
-			name = OpenScavenger;
-			path = MirandApp;
-			sourceTree = "<group>";
-		};
-		A2DF66951C4ABD7900249FF2 /* MirandAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				A2DF66961C4ABD7900249FF2 /* MirandAppTests.swift */,
-				A2DF66981C4ABD7900249FF2 /* Info.plist */,
-			);
-			path = MirandAppTests;
-			sourceTree = "<group>";
-		};
-		A2DF66A01C4ABD7900249FF2 /* MirandAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A2DF66A11C4ABD7900249FF2 /* MirandAppUITests.swift */,
-				A2DF66A31C4ABD7900249FF2 /* Info.plist */,
-			);
-			path = MirandAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +190,7 @@
 			dependencies = (
 			);
 			name = OpenScavenger;
-			productName = MirandApp;
+			productName = OpenScavenger;
 			productReference = A2DF667B1C4ABD7800249FF2 /* OpenScavenger.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -209,7 +208,7 @@
 				A2DF66941C4ABD7900249FF2 /* PBXTargetDependency */,
 			);
 			name = OpenScavengerTests;
-			productName = MirandAppTests;
+			productName = OpenScavengerTests;
 			productReference = A2DF66921C4ABD7900249FF2 /* OpenScavenger.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -227,7 +226,7 @@
 				A2DF669F1C4ABD7900249FF2 /* PBXTargetDependency */,
 			);
 			name = OpenScavengerUITests;
-			productName = MirandAppUITests;
+			productName = OpenScavengerUITests;
 			productReference = A2DF669D1C4ABD7900249FF2 /* OpenScavenger.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -285,9 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DF668C1C4ABD7900249FF2 /* LaunchScreen.storyboard in Resources */,
-				A2DF66891C4ABD7800249FF2 /* Assets.xcassets in Resources */,
-				A2DF66841C4ABD7800249FF2 /* Main.storyboard in Resources */,
+				A20327461C6BAFBE00BD037E /* Main.storyboard in Resources */,
+				A20327441C6BAFBE00BD037E /* Assets.xcassets in Resources */,
+				A20327451C6BAFBE00BD037E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DF66871C4ABD7800249FF2 /* MirandApp.xcdatamodeld in Sources */,
-				A2EBE7A91C5202A0001FD585 /* Point.swift in Sources */,
-				A2DF66811C4ABD7800249FF2 /* ViewController.swift in Sources */,
-				A2EBE7A81C5202A0001FD585 /* Point+CoreDataProperties.swift in Sources */,
-				A2DF667F1C4ABD7800249FF2 /* AppDelegate.swift in Sources */,
+				A203274B1C6BAFBE00BD037E /* ViewController.swift in Sources */,
+				A203274A1C6BAFBE00BD037E /* Point.swift in Sources */,
+				A20327481C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld in Sources */,
+				A20327491C6BAFBE00BD037E /* Point+CoreDataProperties.swift in Sources */,
+				A20327431C6BAFBE00BD037E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DF66971C4ABD7900249FF2 /* MirandAppTests.swift in Sources */,
+				A20401B61C764E670035E9AB /* OpenScavengerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DF66A21C4ABD7900249FF2 /* MirandAppUITests.swift in Sources */,
+				A20401B71C764E6F0035E9AB /* OpenScavengerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,20 +351,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A2DF66821C4ABD7800249FF2 /* Main.storyboard */ = {
+		A20327331C6BAFBE00BD037E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A2DF66831C4ABD7800249FF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A2DF668A1C4ABD7900249FF2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2DF668B1C4ABD7900249FF2 /* Base */,
+				A20327341C6BAFBE00BD037E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A20327351C6BAFBE00BD037E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A20327361C6BAFBE00BD037E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -456,15 +455,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MirandApp/Info.plist;
+				INFOPLIST_FILE = OpenScavenger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavenger;
 				PRODUCT_NAME = OpenScavenger;
 			};
 			name = Debug;
@@ -473,15 +473,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MirandApp/Info.plist;
+				INFOPLIST_FILE = OpenScavenger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavenger;
 				PRODUCT_NAME = OpenScavenger;
 			};
 			name = Release;
@@ -490,9 +491,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MirandAppTests/Info.plist;
+				INFOPLIST_FILE = OpenScavengerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavengerTests;
 				PRODUCT_NAME = OpenScavenger;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenScavenger.app/OpenScavenger";
 			};
@@ -502,9 +503,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MirandAppTests/Info.plist;
+				INFOPLIST_FILE = OpenScavengerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavengerTests;
 				PRODUCT_NAME = OpenScavenger;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenScavenger.app/OpenScavenger";
 			};
@@ -513,11 +514,11 @@
 		A2DF66AD1C4ABD7900249FF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = MirandAppUITests/Info.plist;
+				INFOPLIST_FILE = OpenScavengerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavengerUITests;
 				PRODUCT_NAME = OpenScavenger;
-				TEST_TARGET_NAME = MirandApp;
+				TEST_TARGET_NAME = OpenScavenger;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -525,11 +526,11 @@
 		A2DF66AE1C4ABD7900249FF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = MirandAppUITests/Info.plist;
+				INFOPLIST_FILE = OpenScavengerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.MirandAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umn.d.rysau001.OpenScavengerUITests;
 				PRODUCT_NAME = OpenScavenger;
-				TEST_TARGET_NAME = MirandApp;
+				TEST_TARGET_NAME = OpenScavenger;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -576,13 +577,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A2DF66851C4ABD7800249FF2 /* MirandApp.xcdatamodeld */ = {
+		A20327381C6BAFBE00BD037E /* OpenScavenger.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A2DF66861C4ABD7800249FF2 /* MirandApp.xcdatamodel */,
+				A20327391C6BAFBE00BD037E /* OpenScavenger.xcdatamodel */,
 			);
-			currentVersion = A2DF66861C4ABD7800249FF2 /* MirandApp.xcdatamodel */;
-			path = MirandApp.xcdatamodeld;
+			currentVersion = A20327391C6BAFBE00BD037E /* OpenScavenger.xcdatamodel */;
+			path = OpenScavenger.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

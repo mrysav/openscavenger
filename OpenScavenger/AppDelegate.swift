@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MirandApp
+//  OpenScavenger
 //
 //  Created by Mitchell Rysavy on 1/16/16.
 //  Copyright © 2016 Mitchell Rysavy. All rights reserved.
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        MagicalRecord.setupCoreDataStackWithStoreNamed("MirandaApp.sqlite")
+        MagicalRecord.setupCoreDataStackWithStoreNamed("OpenScavenger.sqlite")
         return true
     }
 
